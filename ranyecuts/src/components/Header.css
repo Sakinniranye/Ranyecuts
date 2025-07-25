@@ -1,0 +1,125 @@
+.header {
+    position: static;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: black;
+}
+
+/* Header bottom nav row */
+.header-bottom {
+    padding: 0.9rem 0 0.6rem 0;
+    background: transparent;
+}
+
+/* Container for nav alignment */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Nav list */
+.navbar-list {
+    display: flex;
+    gap: 1.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Nav links — All white with animated underline */
+.navbar-link {
+    color: #fff !important;        /* force white! */
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: color 0.13s;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    outline: none;
+}
+
+/* Fancy animated underline */
+.navbar-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.19s;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+    width: 100%;
+}
+
+/* Optional: Slight color change on hover for feedback */
+.navbar-link:hover,
+.navbar-link.active {
+    color: #fff;
+}
+
+/* Main button style */
+.btn.has-before {
+    background: #bcbcbc;
+    color: #222;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 1.11rem;
+    padding: 0.75rem 2.1rem;
+    text-transform: uppercase;
+    border: none;
+    transition: background 0.16s, color 0.16s;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-left: 1.7rem;
+    text-decoration: none;
+}
+
+.btn.has-before:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Contact/phone (top bar) */
+.item-title,
+.item-link {
+    font-size: 2.07rem;
+    color: #bbb;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.header-divider {
+    width: 99%;
+    height: 3px;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 1px 10px #0001;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

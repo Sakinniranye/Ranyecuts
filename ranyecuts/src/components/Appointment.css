@@ -1,0 +1,244 @@
+:root {
+    --purdue-dark: #191919;
+    --purdue-grey: #232323;
+    --card-radius: 18px;
+  }
+  :root {
+    --main-silver: white;
+    --background-black: black;
+    --deep-black: #000;
+    --card-dark: #181818;
+    --card-radius: 18px;
+  }
+
+  
+  body, .appointment-page {
+    min-height: 100vh;
+    background: var(--background-black);
+    /* For centering on ultrawide screens */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 105px; /* Adjust to the header height */
+  }
+  
+  
+  /* .top-bar {
+    height: 8px;
+    background: var(--main-silver);
+    width: 100vw;
+    margin-bottom: 0;
+  }
+   */
+  .appointment-header {
+    padding: 2.5rem 2rem 0.3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--main-silver);
+    gap: 0.15rem;
+  }
+  .appointment-header h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+  }
+  .appointment-header p {
+    color: var(--main-silver);
+    margin-top: 0.3rem;
+    font-size: 1.06rem;
+  }
+  
+  .appointment-nav-row {
+    width: 100%;
+    padding: 2.1rem 0 0.1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.7rem;
+  }
+  .nav-btn {
+    background: var(--main-silver);
+    color: black;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 12px;
+    font-size: 1.18rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: 0 1px 12px #0006;
+    letter-spacing: 0.04em;
+  }
+  .nav-btn:hover {
+    background: white;
+    color: #000;
+  }
+  
+  .appointment-content-flex {
+    display: flex;
+    gap: 2.8rem;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5rem 2rem 1rem 2rem;
+    min-height: 600px;
+  }
+  .services-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    min-width: 420px;
+    max-width: 570px;
+  }
+  
+  .service-card {
+    background: var(--purdue-dark);
+    border-radius: var(--card-radius);
+    padding: 1.6rem 2.3rem 1.1rem 2.3rem;
+    box-shadow: 0 4px 20px #0004;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.21s, transform 0.21s;
+    cursor: pointer;
+    min-width: 380px;
+    color: var(--main-silver);
+  }
+  .service-card:hover, .service-card.expanded {
+    box-shadow: 0 8px 30px #ceb88830, 0 2px 12px #0002;
+    transform: translateY(-2px) scale(1.011);
+    background: #26231e;
+  }
+  .service-card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .price {
+    font-size: 1.08rem;
+    font-weight: bold;
+    color: var(--main-silver);
+  }
+  .appointments {
+    color: var(--main-silver);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .expand-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.23s;
+    display: inline-block;
+  }
+  .expand-arrow.rotated {
+    transform: rotate(90deg);
+  }
+  .expanded-times {
+    padding-top: 1.25rem;
+    padding-bottom: 0.7rem;
+    animation: expandFade 0.31s;
+  }
+  @keyframes expandFade {
+    from { opacity: 0; transform: translateY(-15px);}
+    to   { opacity: 1; transform: none;}
+  }
+  .timeslot-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0.7rem 0 1rem 0;
+  }
+  .timeslot-pill {
+    border: none;
+    border-radius: 22px;
+    background: var(--purdue-grey);
+    color: var(--main-silver);
+    padding: 0.55rem 1.25rem;
+    font-size: 1.01rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    outline: none;
+    font-weight: 600;
+  }
+  .timeslot-pill.selected, .timeslot-pill:hover {
+    background: var(--main-silver);
+    color: #111;
+  }
+  .book-btn {
+    background: var(--main-silver);
+    color: #111;
+    border: none;
+    border-radius: 11px;
+    padding: 0.67rem 1.9rem;
+    font-size: 1.09rem;
+    cursor: pointer;
+    margin-top: 0.65rem;
+    font-weight: 700;
+    box-shadow: 0 1px 6px #0002;
+    transition: background 0.2s, color 0.2s;
+  }
+  .book-btn:hover {
+    background: #fff5e1;
+    color: #000;
+  }
+  .loading-text {
+    color: #ccb97d;
+    margin: 0.6rem 0 1rem 0;
+  }
+  .no-times {
+    color: #ceb888;
+    margin: 0.7rem 0 1rem 0;
+  }
+  
+  .calendar-box {
+    background: var(--purdue-grey);
+    border-radius: 24px;
+    padding: 2.1rem 2.4rem;
+    min-width: 490px;
+    max-width: 590px;
+    box-shadow: 0 4px 24px #0005;
+    margin-left: auto;
+    margin-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .big-calendar .react-datepicker {
+    width: 100% !important;
+    font-size: 1.34rem;
+  }
+  .react-datepicker {
+    width: 370px !important;
+  }
+  .calendar-controls {
+    display: none !important; /* Remove from inside the card */
+  }
+  .confirmation-message {
+    text-align: center;
+    margin-top: 2.2rem;
+    background: var(--purdue-grey);
+    color: #a6ff99;
+    padding: 1.1rem;
+    border-radius: 12px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.14rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 12px #0002;
+  }
+  @media (max-width: 1150px) {
+    .appointment-content-flex {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.4rem 0.5rem;
+      align-items: stretch;
+    }
+    .services-list, .calendar-box {
+      min-width: 0;
+      max-width: 100vw;
+    }
+    .calendar-box {
+      align-self: center;
+      margin: 0 auto;
+    }
+  }
+  

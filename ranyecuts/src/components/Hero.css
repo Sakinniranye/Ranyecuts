@@ -1,0 +1,45 @@
+.hero {
+    min-height: 100vh;              /* Fills the whole viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;          /* Stack content vertically */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    text-align: center;              /* Center text horizontally */
+    padding-bottom: 30vh;
+  }
+  
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .hero .span {
+    font-size: 1.5rem;
+  }
+  .hero-text {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 14px #0007;
+    max-width: 680px;
+  }
+  
+  .btn.has-before {
+    margin-top: 1.2rem;
+  }
+  
+  @media (max-width: 700px) {
+    .hero-text {
+      font-size: 1.25rem;
+      max-width: 90vw;
+    }
+  }
+  
+  
